@@ -30,7 +30,7 @@ class UI {
 
   static deleteProduct(element) {
     console.log("element", element)
-    element.parentElement.parentElement.remove();
+    element.parentElement.remove();
     return true;
   }
 
@@ -56,11 +56,12 @@ class UI {
 //DOM Events
 document.getElementById("product-form").addEventListener("submit", e => {
   const name = document.getElementById("product-name").value
-    price = document.getElementById("product-price").value
+  const  price = document.getElementById("product-price").value
+  const year =document.getElementById("product-year").value
 
 
   //Create a new Object Product
-  const product = new Product(name, price);
+  const product = new Product(name, price, year);
 
 
   //Save product
